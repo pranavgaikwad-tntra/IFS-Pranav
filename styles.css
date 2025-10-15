@@ -1,0 +1,584 @@
+/* ============================================== GENERAL PAGE SETUP ===================================================== */
+
+* {
+    margin: 0;           
+    padding: 0;         
+    box-sizing: border-box;  
+}
+
+/*  set up the basic look for the entire page body */
+body {
+    font-family: "Poppins", sans-serif;  /* Poppins font from Google Fonts to match the design font style */
+    background-color: white;             
+}
+
+/* =========================================== HEADER AND NAVIGATION SECTION =============================================== */
+
+header {
+    background-color: white;                
+    padding: 20px 50px;                     /*  added 20px space top/bottom and 50px space left/right */
+    
+}
+/*  set up the navigation bar to arrange items horizontally */
+nav {
+    display: flex;                    /*  used flexbox to arrange logo and menu items in a row */
+    justify-content: space-between;   /*  pushed logo to left and menu to right with space between */
+    align-items: center;              /*  vertically centered everything in the nav bar */
+}
+
+/*  styled my logo text */
+.logo {
+    font-size: 24px;        
+    font-weight: bold;      
+    color: #4ed0ff;        
+}
+
+/*  styled the navigation menu list */
+.nav-links {
+    display: flex;          
+    list-style: none;       /*  removed the bullet points from the list */
+    gap: 30px;            
+    align-items: center;   
+}
+
+/*  styled all the links in my navigation menu */
+.nav-links a {
+    text-decoration: none;     
+    color: #333;              
+    font-size: 14px;          
+    transition: color 0.3s;  
+}
+
+/*  added a hover effect so users know links are clickable */
+.nav-links a:hover {
+    color: #4ed0ff;  /*  made links turn cyan when you hover over them */
+}
+
+/* contact button CSS */
+.contact-btn {
+    background-color: #4ed0ff;   
+    color: white !important;       
+    padding: 10px 25px;           
+    border-radius: 10px;          
+}
+
+/* =================================================== MAIN BANNER / HERO SECTION ========================================== */
+
+/* created the main banner area with light blue background */
+.banner {
+    background-color: #dff9fd;  
+    padding: 80px 50px;        
+}
+
+/* set up the banner content container */
+.banner-content {
+    max-width: 1200px;         
+    margin: 0 auto;            
+    display: flex;             
+    gap: 50px;                
+    align-items: center;      
+}
+
+/*  styled the left side of the banner (text content) */
+.banner-text {
+    flex: 1;  /*  made this take up equal space with the image */
+}
+
+/*  styled the main headline */
+.banner-text h1 {
+    font-size: 42px;      
+    color: #333;          
+    margin-bottom: 20px;  /*  added space below the headline */
+}
+
+/*  created a special class to make certain text cyan */
+.blue-text {
+    color: #4ed0ff;  
+}
+
+/*  styled the description paragraph in the banner */
+.banner-text p {
+    color: #6e6d6d;      
+    font-size: 16px;     
+    margin-bottom: 30px; /*  added space before the buttons */
+    line-height: 1.6;    /* increased line spacing for better readability */
+}
+
+/*  set up the button container */
+.banner-buttons {
+    display: flex;  /*  arranged buttons horizontally */
+    gap: 15px;     /*  added space between the two buttons */
+}
+
+/* styled the blue "Get Started" button */
+.button-blue {
+    background-color: #4ed0ff;  
+    color: white;               
+    padding: 15px 30px;        
+    border: none;               
+    border-radius: 10px;       
+    font-size: 16px;           
+    
+}
+
+/*  added hover effect for the blue button */
+.button-blue:hover {
+    background-color: white;  
+    color: #6ceeff;          
+}
+
+/*  styled the white "View More" button */
+.button-white {
+    background-color: white;      
+    color: #6ceeff;              
+    padding: 15px 30px;          
+    border: 1px solid #6ceeff;   
+    border-radius: 10px;         
+    font-size: 16px;            
+}
+
+/*  added hover effect for the white button */
+.button-white:hover {
+    background-color: #6ceeff;  
+    color: white;              
+}
+
+/* styled the right side of banner (image container) */
+.banner-image {
+    flex: 1;  /* made this take up equal space with the text */
+}
+
+/* ============================================== SERVICE BOXES SECTION ====================================================*/
+
+/* created a container for the four service boxes */
+.service-boxes {
+    max-width: 1200px;      
+    margin: 0 auto;        
+    padding: 80px 50px;    
+    display: flex;          /*  arranged boxes in a row */
+    gap: 50px;             /*  added space between each box */
+    justify-content: center; /* centered all boxes horizontally */
+}
+
+/* I styled each individual service box */
+.service-box {
+    display: flex;  /*  arranged icon and text horizontally */
+    gap: 12px;     /* added small space between icon and text */
+}
+
+/* created the icon container with rounded corners */
+.service-icon {
+    width: 50px;             
+    height: 50px;            
+    border-radius: 12px;      
+    display: flex;            
+    justify-content: center;  
+    align-items: center;      
+}
+
+/*  created different background colors for each service box */
+.purple-box {
+    background-color: #e8d9ff;  
+}
+
+.green-box {
+    background-color: #d9ffe8;  
+}
+
+.blue-box {
+    background-color: #d9e8ff;  
+}
+
+.orange-box {
+    background-color: #ffd9d9;  
+}
+
+/* sized the icons inside the colored boxes */
+.service-icon img {
+    width: 28px;  
+    height: 28px;  
+}
+
+/* styled the service title */
+.service-info h3 {
+    font-size: 15px;      
+    font-weight: 600;     
+    color: #333;         
+    margin-bottom: 2px;  
+}
+
+/* styled the service description text */
+.service-info p {
+    font-size: 12px; 
+    color: #b0b0b0;  
+    margin: 0;       
+}
+
+/* ============================================ HORIZONTAL DIVIDER LINE ============================================ */
+
+hr {
+    color: #d9d9d9;  
+}
+
+/* ============================================ ABOUT / MIDDLE SECTION ============================================ */
+
+/* created a centered text section */
+.middle-section {
+    max-width: 900px;    
+    margin: 0 auto;      
+    padding: 80px 50px;  
+    text-align: center;  
+}
+
+/*  styled the section heading */
+.middle-section h2 {
+    font-size: 36px;      
+    color: #333;          
+    margin-bottom: 20px; 
+}
+/* styled the description paragraph */
+.middle-section p {
+    font-size: 16px;   
+    color: #999;        
+    line-height: 1.6;   
+}
+
+/* ============================================ INFO SECTIONS WITH IMAGES ============================================ */
+
+/* created the container for all info rows */
+.info-sections {
+    max-width: 1200px;   
+    margin: 0 auto;      
+    padding: 80px 50px;  
+}
+
+/*  styled each row that contains image and text */
+.info-row {
+    display: flex;         
+    gap: 80px;            
+    margin-bottom: 100px; 
+    align-items: center;  
+}
+/* created alternate layout where image is on the right */
+.info-row.reverse {
+    flex-direction: row-reverse;  /* flipped the order so text is on left */
+}
+
+/* styled the image container */
+.info-image {
+    flex: 1;  
+}
+
+/* made images responsive and gave them rounded corners */
+.info-image img {
+    width: 100%;         
+    height: auto;         
+    border-radius: 10px;  
+}
+
+/* styled the text content container */
+.info-text {
+    flex: 1;  
+}
+
+/* created a header area with icon and small text */
+.text-header {
+    display: flex;       
+    gap: 12px;           
+    margin-bottom: 15px; 
+    align-items: center;
+}
+
+/* created circular icon containers */
+.icon-circle {
+    width: 45px;             
+    height: 45px;             
+    border-radius: 50%;      
+    display: flex;            
+    justify-content: center;  
+    align-items: center;      
+}
+
+/* gave each section a different colored circle */
+.cyan-circle {
+    background-color: #16aaaa;  
+}
+
+.blue-circle {
+    background-color: #4f93f9;  
+}
+
+.purple-circle {
+    background-color: #a76ffc;  
+}
+
+/* sized the icons inside circles */
+.icon-circle img {
+    width: 24px;   
+    height: 24px;  
+}
+
+/* styled the small text next to icons */
+.text-header p {
+    font-size: 13px;  
+    color: #999;      
+    margin: 0;        
+}
+
+/* styled the main heading in each info section */
+.info-text h3 {
+    font-size: 28px;      
+    color: #333;          
+    margin-bottom: 15px;  
+}
+
+/* styled the description paragraphs */
+.info-text p {
+    font-size: 14px;    
+    color: #999;        
+    line-height: 1.8;   
+}
+
+/* ============================================ TWO CARDS SECTION ============================================ */
+
+/* created a container for two side-by-side cards */
+.two-cards {
+    max-width: 1200px;   
+    margin: 0 auto;      
+    padding: 80px 50px;  
+    display: flex;       
+    gap: 30px;          
+}
+
+/* styled each card */
+.card {
+    flex: 1;              
+    padding: 40px;        
+    border-radius: 15px;  
+}
+
+/* created a light gray card */
+.light-card {
+    background-color: #f8f8f8;  
+}
+
+/* created a cyan colored card */
+.blue-card {
+    background-color: #4ed0ff;  
+}
+
+/* styled card headings */
+.card h3 {
+    font-size: 22px;      
+    color: #333;          
+    margin-bottom: 20px;  
+}
+
+/* made the blue card heading white for contrast */
+.blue-card h3 {
+    color: white;  
+}
+
+/* styled card description text */
+.card p {
+    font-size: 14px;      
+    color: #666;          
+    line-height: 1.8;     
+    margin-bottom: 25px;  
+}
+
+/* made the blue card text white */
+.blue-card p {
+    color: white;  
+}
+
+/* styled the card buttons */
+.card button {
+    background-color: white;  
+    color: #4ed0ff;          
+    padding: 12px 30px;      
+    border-radius: 8px;      
+    font-size: 14px;        
+    border: none;           
+           
+}
+
+/* added hover effect for card buttons */
+.card button:hover {
+    background-color: #4ed0ff;  
+    color: white;               
+}
+
+/* ============================================ COMPANY LOGOS SECTION ============================================ */
+
+/* created the company logos showcase section */
+.company-logos {
+    max-width: 1200px;        
+    margin: 0 auto;           
+    padding: 60px 50px 80px;  
+    text-align: center;       
+}
+
+/* styled the section heading */
+.company-logos h2 {
+    font-size: 32px;      
+    color: #333;          
+    margin-bottom: 50px;  
+}
+
+/* arranged the logos in a row */
+.logos {
+    display: flex;          
+    gap: 60px;             
+    justify-content: center; 
+}
+
+/* sized the company logo images */
+.logos img {
+    height: 150px;  
+    width: 200px;   
+}
+
+/* ============================================ EMAIL SIGNUP SECTION ============================================ */
+
+/* created the newsletter signup area */
+.email-inp {
+    background-color: #dff9fd;  
+    padding: 80px 50px;         
+    text-align: center;         
+}
+
+/* styled the signup heading */
+.email-inp h2 {
+    font-size: 36px;      
+    color: #333;          
+    margin-bottom: 40px;  
+}
+
+/* styled the form container */
+.subscribe {
+    display: flex;          
+    gap: 15px;             
+    justify-content: center; 
+}
+
+/* styled the email input field */
+.subscribe input {
+    padding: 16px 24px;  
+    border: none;        
+    border-radius: 8px;  
+    font-size: 14px;    
+    width: 350px;       
+}
+
+/*  styled the subscribe button */
+.subscribe button {
+    background-color: black;  
+    color: white;             
+    padding: 16px 40px;      
+    border-radius: 8px;       
+    font-size: 14px;         
+    border: none;            
+        
+}
+
+/*  added hover effect for subscribe button */
+.subscribe button:hover {
+    background-color: #4ed0ff;  /* Change to your brand cyan color */
+    transform: translateY(-3px);  /* Lift up slightly */
+    box-shadow: 0 8px 20px rgba(78, 208, 255, 0.4);  /* Glowing shadow */
+}
+
+/* ============================================ FOOTER SECTION ============================================ */
+
+/* created the footer at bottom of page */
+.footer {
+    background-color: #f8f8f8;  
+    padding: 60px 50px;        
+}
+
+/* set up the footer content layout */
+.footer-content {
+    max-width: 1200px;  
+    margin: 0 auto;     
+    display: flex;      
+    gap: 60px;         
+}
+
+/* styled each footer column */
+.footer-column {
+    flex: 1;  
+}
+
+/* added space below logo in footer */
+.footer-column .logo {
+    margin-bottom: 20px;  
+}
+
+/* styled footer paragraphs */
+.footer-column p {
+    font-size: 13px;      
+    color: #999;          
+    line-height: 1.6;     
+    margin-bottom: 15px;  
+}
+
+/* styled the small copyright text */
+.small-text {
+    color: #666;       
+    font-weight: 500;  
+}
+
+/* styled footer column headings */
+.footer-column h3 {
+    font-size: 16px;      
+    font-weight: 600;     
+    color: #333;          
+    margin-bottom: 20px;  
+}
+
+/* styled footer links */
+.footer-column a {
+    display: block;        
+    text-decoration: none; 
+    color: #999;          
+    font-size: 14px;      
+    margin-bottom: 12px;  
+}
+
+/* added hover effect for footer links */
+.footer-column a:hover {
+    color: #4ed0ff;  
+}
+
+/* styled the phone number */
+.phone {
+    color: #333 !important;  
+    font-weight: 500;        
+}
+
+/* created container for social media icons */
+.social-links {
+    display: flex;       
+    gap: 15px;          
+    padding-top: 35px;  
+}
+
+/* styled each social media icon */
+.social-links a {
+    width: 35px;              
+    height: 35px;             
+    background-color: white;  
+    border-radius: 8px;       
+    display: flex;            
+    justify-content: center;  
+    align-items: center;      
+    color: #333;             
+    font-weight: 600;        
+}
+
+/* added hover effect for social icons */
+.social-links a:hover {
+    background-color: #4ed0ff;  
+    color: white;               
+}
